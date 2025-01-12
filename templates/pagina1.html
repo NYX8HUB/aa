@@ -31,6 +31,13 @@
             text-shadow: 1px 1px 3px #000;
         }
 
+        .date {
+            font-size: 1.5em;
+            color: #0d47a1; /* Azul escuro */
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px #000;
+        }
+
         input[type="text"] {
             padding: 10px;
             font-size: 1em;
@@ -55,7 +62,7 @@
         }
 
         button:hover {
-            background-color: #f1c40f;
+            background-color: #51aff7;
         }
 
         .container {
@@ -108,7 +115,8 @@
         <h1>Aniversário do Cauã</h1>
         <p>Coloque o seu nome e confirme sua presença no aniversário!!</p>
         <form action="/divirta" method="POST">
-            <input type="text" name="nome" placeholder="Seu nome" required>
+            <div class="date">10/10/1000</div>
+            <input type="text" name="nome" placeholder="Seu Nome Aqui!!!" required>
             <button type="submit">Confirmar Presença</button>
         </form>
     </div>
