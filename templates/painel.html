@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f0f0f0; /* Cor de fundo cinza claro */
-            color: black; /* Texto preto para contrastar com o fundo */
+            background-color: #1d8fdf; /* Fundo azul */
+            color: white; /* Texto branco para contraste com o fundo azul */
             font-family: 'Press Start 2P', cursive;
             text-align: center;
             background-image: url('/static/sonic.png');
@@ -28,7 +28,6 @@
         .presencas {
             margin-top: 30px;
             font-size: 1.5em;
-            text-shadow: 1px 1px 3px #000;
         }
 
         .presenca {
@@ -37,6 +36,11 @@
 
         .presenca span {
             font-weight: bold;
+            color: #f1c40f; /* Nome em amarelo */
+        }
+
+        .presenca .data {
+            color: #f1c40f; /* Data em amarelo */
         }
 
         button {
@@ -61,7 +65,7 @@
     <div class="presencas">
         {% for item in nomes %}
             <div class="presenca">
-                <span>{{ item.nome }}</span> | {{ item.data }}
+                <span>{{ item.nome }}</span> | <span class="data">{{ item.data }}</span>
             </div>
         {% endfor %}
     </div>
