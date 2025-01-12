@@ -3,53 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniversário do Meio</title>
+    <title>Aniversário Cauã</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        /* Estilo básico para o corpo */
         body {
             background-color: #1d8fdf;
             color: white;
             font-family: 'Press Start 2P', cursive;
             text-align: center;
             background-image: url('/static/sonic.png');
-            background-size: contain; /* Altera para "contain" para ajustar o tamanho da imagem */
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             height: 100vh;
             margin: 0;
+            padding: 0;
         }
 
-        /* Título */
         h1 {
-            margin-top: 50px;
-            font-size: 4em;
+            margin-top: 20px;
+            font-size: 3em;
             text-shadow: 2px 2px 5px #000;
         }
 
-        /* Texto abaixo do título */
         p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             text-shadow: 1px 1px 3px #000;
         }
 
-        /* Formulário e caixa de texto */
         input[type="text"] {
             padding: 10px;
-            font-size: 1.2em;
-            width: 50%;
-            margin-top: 20px;
+            font-size: 1em;
+            width: 80%;
+            margin-top: 10px;
             border: 2px solid #fff;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.7);
             color: #333;
         }
 
-        /* Botão */
         button {
-            padding: 10px 20px;
-            font-size: 1.2em;
-            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 1em;
+            margin-top: 10px;
             background-color: #ffcc00;
             color: #1d8fdf;
             border: 2px solid #fff;
@@ -58,12 +54,10 @@
             transition: background-color 0.3s ease;
         }
 
-        /* Efeito hover no botão */
         button:hover {
             background-color: #f1c40f;
         }
 
-        /* Container para centralizar o conteúdo */
         .container {
             display: flex;
             flex-direction: column;
@@ -72,47 +66,46 @@
             height: 100%;
         }
 
-        /* Media queries para ajustar a responsividade */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
+                font-size: 2em;
             }
 
             p {
-                font-size: 1.2em; /* Ajusta o tamanho do texto */
+                font-size: 1em;
             }
 
             input[type="text"] {
-                width: 80%; /* Aumenta a largura da caixa de texto em telas menores */
+                width: 90%;
             }
 
             button {
-                font-size: 1.1em; /* Ajusta o tamanho do botão */
+                font-size: 0.9em;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2em; /* Reduz ainda mais o título para telas muito pequenas */
+                font-size: 1.8em;
             }
 
             p {
-                font-size: 1em; /* Ajusta ainda mais o texto */
+                font-size: 0.9em;
             }
 
             input[type="text"] {
-                width: 90%; /* A caixa de texto ocupa mais espaço */
+                width: 95%;
             }
 
             button {
-                font-size: 1em; /* Ajusta o botão para telas menores */
+                font-size: 0.8em;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Aniversário do Cauã
+        <h1>Aniversário do Cauã</h1>
         <p>Coloque o seu nome e confirme sua presença no aniversário!!</p>
         <form action="/divirta" method="POST">
             <input type="text" name="nome" placeholder="Seu nome" required>
