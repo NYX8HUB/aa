@@ -3,48 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniversário</title>
+    <title>Aniversário do Meio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #1d8fdf;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Press Start 2P', cursive;
             text-align: center;
             background-image: url('/static/sonic.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            height: 100vh;
+            margin: 0;
         }
         h1 {
             margin-top: 50px;
-            font-size: 3em;
+            font-size: 4em;
+            text-shadow: 2px 2px 5px #000;
         }
         p {
             font-size: 1.5em;
+            text-shadow: 1px 1px 3px #000;
         }
         input[type="text"] {
             padding: 10px;
             font-size: 1.2em;
             width: 50%;
             margin-top: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #333;
         }
         button {
             padding: 10px 20px;
             font-size: 1.2em;
             margin-top: 20px;
-            background-color: #fff;
+            background-color: #ffcc00;
             color: #1d8fdf;
-            border: none;
+            border: 2px solid #fff;
+            border-radius: 10px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #f1c40f;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>Aniversário do Meio</h1>
-    <p>Coloque o seu nome e confirme sua presença no aniversário!!</p>
-    <form action="/divirta" method="POST">
-        <input type="text" name="nome" placeholder="Coloque seu nome aqui!!" required>
-        <button type="submit">Confirmar Presença</button>
-    </form>
+    <div class="container">
+        <h1>Aniversário do Meio</h1>
+        <p>Coloque o seu nome e confirme sua presença no aniversário!!</p>
+        <form action="/divirta" method="POST">
+            <input type="text" name="nome" placeholder="Coloque seu nome aqui!!!" required>
+            <button type="submit">Confirmar Presença</button>
+        </form>
+    </div>
 </body>
 </html>
