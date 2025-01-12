@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Presenças</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .presenca {
+            margin: 20px;
+            padding: 10px;
+            background-color: #1d8fdf;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2em;
+        }
+        .nome {
+            font-weight: bold;
+        }
+        .data {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Painel de Presenças</h1>
+    <div>
+        {% for item in nomes %}
+            <div class="presenca">
+                <span class="nome">{{ item.nome }}</span>
+                <span class="data">{{ item.data }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
