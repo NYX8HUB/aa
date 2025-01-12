@@ -24,7 +24,7 @@ def salvar_nome(nome):
 def divirta():
     nome = request.form['nome']
     salvar_nome(nome)
-    return redirect('/painel')
+    return render_template('mensagem_confirmacao.html', nome=nome)
 
 @app.route('/painel')
 def painel():
